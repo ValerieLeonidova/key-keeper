@@ -1,0 +1,35 @@
+.header {
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	z-index: 1000;
+	padding: 1.250rem 5.625rem;
+	@media @desktop {
+		padding: 1.250rem 2rem
+	}
+	@media @tablet {
+		padding: 1.250rem 2rem
+	}
+	@media @tablet-portrait, @mobile {
+		padding: 0.5rem 1rem;
+	}
+	.logo {
+		width:7.063rem;
+		display: block;
+		@media @tablet-portrait, @mobile {
+			margin: 0 auto;
+		}
+		@media @mobile {
+			width:6.063rem;
+		}
+		@media @mobile-xs {
+			//margin: 0;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+}

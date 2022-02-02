@@ -1,0 +1,116 @@
+.row:before, .row:after {display: none !important;}
+* {
+	margin:0;
+	padding: 0;
+}
+html,
+body {
+	color: @text;
+	min-height: 100vh;
+	background: @white;
+	//overflow-x: hidden;
+	line-height: 1.1;
+	.OS;
+	@media (min-width:1441px) {
+		font-size: 16px;
+	}
+	@media (max-width:1440px) {
+		font-size: 13px;
+	}
+}
+img {
+	vertical-align: top;
+}
+a {
+	color: @primary;
+	text-decoration: none;
+	&:hover {
+		color: @primary;
+		text-decoration: underline;
+	}
+}
+.overlay {
+	padding-top: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	display:none;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 100;
+	}
+	&.show {
+		display: block;
+	}
+}
+.no-scroll {
+	@media @mobile {
+		position: fixed;
+		width:100%;
+		height: 100%;
+		overflow: hidden;
+	}
+}
+.container {
+	max-width: 97.500rem;
+	width: 100%;
+}
+.wrapper {
+
+}
+.btn {
+	.inline-b;
+	.line-height(46);
+	.ttu;
+	//height: 45px;
+	background: @primary;
+	color:@white;
+	.font-size(16);
+
+	.letter-spacing(100);
+	font-weight: normal;
+	border: 2px solid @primary;
+	cursor: pointer;
+	border-radius: 0;
+	padding: 0 1.875rem;
+	.transition(all 0.3s ease);
+	outline: 0;
+	//-webkit-appearance: none;
+	&:hover {
+		border-color:@primary;
+		background: transparent;
+		color:@primary;
+		text-decoration: none;
+	}
+	&:focus {
+		box-shadow:none;
+		color:@white;
+	}
+	&.btn-transparent {
+		background: none;
+		color:@primary;
+	}
+}
+
+
+
+
+//@media @tablet-portrait, @mobile {
+//	.wow {
+//		visibility: visible !important;
+//		-webkit-animation: none !important;
+//		-moz-animation: none !important;
+//		-o-animation: none !important;
+//		-ms-animation: none !important;
+//		animation: none !important;
+//	}
+//}

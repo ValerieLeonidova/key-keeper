@@ -1,0 +1,233 @@
+/* **************** VARIABLES ****************** */
+@primary: rgba(245,122,47,1);
+@secondary: rgba(29,29,29,1);
+@text: rgba(84,84,84,1);
+@white: #ffffff;
+@black: #000000;
+
+.OS {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.color-primary {
+	color:@primary;
+}
+.color-black {
+	color:@black;
+}
+
+.hidden {
+	opacity:0;
+}
+.visible{
+	opacity:1;
+}
+
+.full {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.text-underline {
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both;
+	*zoom: 1;
+	height: 0;
+	visibility: hidden;
+	display: block;
+	content: "";
+}
+.inline-b {
+	display: inline-block;
+	vertical-align: top;
+}
+.vam {
+	vertical-align: middle;
+}
+.vat {
+	vertical-align: top;
+}
+.vab {
+	vertical-align: bottom;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+}
+.clearfix:after,
+.container:after,
+.row:after {
+	clear: both;
+}
+
+/* for IE6-7 */
+.clearfix,
+.container,
+.row {
+	zoom: 1;
+	position: relative;
+}
+.after,
+.before {
+	content: '';
+	display: block;
+}
+.fll {
+	float: left;
+}
+.flr {
+	float: right;
+}
+.fln {
+	float: none;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.ttu {
+	text-transform: uppercase;
+}
+.bd100 {
+	border-radius: 100%;
+}
+.w100p {
+	width: 100%;
+}
+.w50p {
+	width: 50%;
+}
+.font-size(@font-size-px) {
+	font-size: @font-size-px/16rem;
+}
+.line-height(@line-height-px) {
+	line-height: @line-height-px/16rem;
+}
+.letter-spacing(@letter-spacing-ps){
+	letter-spacing: @letter-spacing-ps/1000em;
+}
+
+
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+
+.transition(@transition){
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-ms-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.background-size(@cover) {
+	-moz-background-size: @cover;
+	-webkit-background-size: @cover;
+	-o-background-size: @cover;
+	background-size: @cover;
+}
+
+.pos-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.pos-centerY {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.pos-centerX  {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.placeholder(@color: #fff) {
+	&::-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+	&:-moz-placeholder {
+		color: @color;
+	}
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
+.circle(@width){
+	width:@width;
+	height: @width;
+	border-radius: 50%;
+}
+.square(@width){
+	width:@width;
+	height: @width;
+}
+
+
+// Breakpoints
+// ------------------------- Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+@15: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+@2: ~"only screen and (-webkit-min-device-pixel-ratio: 2)",
+~"only screen and (min--moz-device-pixel-ratio: 2)",
+~"only screen and (-o-min-device-pixel-ratio: 2)",
+~"only screen and (min-device-pixel-ratio: 2)";
+@3: ~"only screen and (-webkit-min-device-pixel-ratio: 3)",
+~"only screen and (min--moz-device-pixel-ratio: 3)",
+~"only screen and (min-device-pixel-ratio: 3)";
+@mobile-xs:   ~"only screen and (max-width: 575.98px)";
+@mobile:      ~"only screen and (max-width: 767.98px)";
+@tablet-portrait:      ~"only screen and (min-width: 767.99px) and (max-width: 991.98px)";
+@tablet:      ~"only screen and (min-width: 767.99px) and (max-width: 1199.98px)";
+@desktop:     ~"only screen and (min-width: 1199.99px) and (max-width: 1366px)";
+@desktop-lg:     ~"only screen and (min-width:1199.99px) and (max-width: 1440px)";
+@desktop-xl:  ~"only screen and (max-width: 1679px)";
+@desktop-xl-min:  ~"only screen and (min-width: 1680px)";
+@desktop-extra-big: ~"screen and (min-width: 1900px)";

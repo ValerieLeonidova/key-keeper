@@ -1,0 +1,38 @@
+.footer {
+  position: relative;
+  background: @black;
+  text-align: center;
+  padding: 2.813rem 0;
+  z-index: 20;
+  .logo {
+    display: block;
+    margin: 0 auto 1.563rem;
+    width:6.5rem;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1.563rem;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:@white;
+      .circle(2.188rem);
+      border:0.125rem solid @white;
+      margin: 0 0.313rem;
+      .font-size(16);
+      &:hover {
+        text-decoration: none;
+        background: @white;
+        color:@black;
+      }
+    }
+  }
+  .copy {
+    display: block;
+    .font-size(13);
+    color:#636363;
+  }
+}
+
